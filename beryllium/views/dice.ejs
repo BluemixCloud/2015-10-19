@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBM CA 101 | Dice</title>
+    <link rel="stylesheet" href="/foundation/css/foundation.css" />
+    <script src="/foundation/js/vendor/modernizr.js"></script>
+    <link rel="icon" type="image/png" href="/images/favicon.ico">
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Dice</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <ul>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-3 columns">
+        <form method="post" action="/dice">
+          <input type="text" name="number" />
+          <button type="submit">Roll</button>
+        </form>
+      </div>
+      <div class="large-9 columns">
+        <% if(locals.rolls) { %>
+          <% for(var i = 0; i < locals.rolls.length; i++) { %>
+            <img src="/images/<%= locals.rolls[i] %>.png" />
+          <% } %>
+        <% } %>
+      </div>
+    </div>
+
+    <script src="/foundation/js/vendor/jquery.js"></script>
+    <script src="/foundation/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

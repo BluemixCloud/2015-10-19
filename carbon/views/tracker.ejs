@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBM CA 101 | Tracker</title>
+    <link rel="stylesheet" href="/foundation/css/foundation.css" />
+    <script src="/foundation/js/vendor/modernizr.js"></script>
+    <link rel="icon" type="image/png" href="/images/favicon.ico">
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 300px; border: 1px solid red;}
+  </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>CA 101 : Tracker</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/people">People</a></li>
+          <li><a href="/tracker">Tracker</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-3 columns">
+        <button id="tracker">Track Me</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Latitude</th>
+              <th>Longitude</th>
+            </tr>
+          <thead>
+            <tbody>
+              <tr>
+                <td id="latitude"></td>
+                <td id="longitude"></td>
+              </tr>
+            <tbody>
+        </table>
+      </div>
+      <div class="large-9 columns">
+        <div id="map"></div>
+      </div>
+    </div>
+
+    <script src="/foundation/js/vendor/jquery.js"></script>
+    <script src="/foundation/js/foundation.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC_kuyaBT2KjxZkcUUE122YsREJncZ9Xo"></script>
+    <script src="/js/tracker.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

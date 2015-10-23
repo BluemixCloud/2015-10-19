@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBM CA 101 | People</title>
+    <link rel="stylesheet" href="/foundation/css/foundation.css" />
+    <script src="/foundation/js/vendor/modernizr.js"></script>
+    <link rel="icon" type="image/png" href="/images/favicon.ico">
+  </head>
+  <body>
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>CA 101 : People</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/people">People</a></li>
+          <li><a href="/tracker">Tracker</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-3 columns">
+        <form method="post" action="/people">
+          <input type="text" name="name" placeholder="name" />
+          <input type="text" name="age" placeholder="age" />
+          <input type="text" name="gender" placeholder="gender" />
+          <input type="text" name="phone" placeholder="phone" />
+          <input type="text" name="url" placeholder="url" />
+          <button type="submit">Add Person</button>
+        </form>
+      </div>
+      <div class="large-9 columns">
+        <table>
+          <thead>
+            <tr>
+              <th>Photo</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Phone</th>
+              <th>Text</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if(locals.people) { %>
+              <% for(var i = 0; i < locals.people.length; i++) { %>
+                <tr>
+                  <td><img style="width:100px;height:100px;" class="th" src="<%= locals.people[i].url %>" /></td>
+                  <td><%= locals.people[i].name %></td>
+                  <td><%= locals.people[i].age %></td>
+                  <td><%= locals.people[i].gender %></td>
+                  <td><%= locals.people[i].phone %></td>
+                  <td><input type="text" /><button class="sms button tiny radius success">Send</button></td>
+                </tr>
+              <% } %>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="/foundation/js/vendor/jquery.js"></script>
+    <script src="/foundation/js/foundation.min.js"></script>
+    <script src="/js/people.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

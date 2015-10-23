@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBM CA 101 | Cube</title>
+    <link rel="stylesheet" href="/foundation/css/foundation.css" />
+    <script src="/foundation/js/vendor/modernizr.js"></script>
+    <link rel="icon" type="image/png" href="/images/favicon.ico">
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Cube</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <ul>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-3 columns">
+        <form method="post" action="/cube">
+          <input type="text" name="x" />
+          <button type="submit">Cube</button>
+        </form>
+      </div>
+      <div class="large-9 columns">
+        <p>cube: <%= locals.cube %></p>
+        <p>x: <%= locals.x %></p>
+      </div>
+    </div>
+
+    <script src="/foundation/js/vendor/jquery.js"></script>
+    <script src="/foundation/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
